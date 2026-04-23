@@ -1,0 +1,49 @@
+code {
+    font-weight: bolder;
+    font-style:italic;
+    background-color: rgba(122, 122, 0, 0.2);
+}
+
+#fontsize {
+    font-size: 25px;
+}
+
+#fontweight{
+    font-weight: 900;
+}
+
+#fontcolor {
+    color: blue;
+}
+
+#fontbackgroundcolor {
+    background-color: red;
+}
+
+#fontfamily {
+    font-family:'Courier New', Courier, monospace;
+}
+
+#fontdisplay {
+    display: block;
+    text-align: right;
+}
+
+#fontstyle {
+    font-style: italic;
+}
+
+table, th{
+    border: 2px rgba(122, 122, 0, 0.5) solid;
+}
+
+td {
+    text-align: center;
+    background-color: rgba(122, 122, 0, 0.2);
+}
+
+
+h1, h2, h3{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: underline; 
+}

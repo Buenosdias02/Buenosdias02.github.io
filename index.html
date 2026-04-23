@@ -1,13 +1,127 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/styles.css">
+    <title>Front-end cheatsheet</title>
+</head>
+<body>
+    <header>
+        <h1>Front-End Cheatsheet</h1>
+        <nav>
+            <!-- navigation list TO DO LATER -->
+            <p>This is a navigation section, where you can choose the topic and be redirected to it within the same website using anchor tags</p>
+            <ul>
+                <li><a href="#Tags_attributes">HTML</a></li>
+                <li><a href="#CSS">CSS</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <body>
-    <h1>Antonio R.M.</h1>
-    <p>Welcome to my website!</p>
-    <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+    <main>
+        <section id="Tags_attributes">
+            <section class="Introduction">
+            <h2>HTML Tags and attributes</h2>
+            <p>HTML uses tags to create elements in the website, and attributes and using within the tags to expand the information or style the elements. Below you will be able to find some of the most useful tags and related attributes used in HTML. </p>
+            </section>
 
-    <div>
-      <p> Hola familia, acabo de editar la página web mientras estamos en llamada</p>
-    </div>
-  </body>
+            <section id="Structure">
+                <h3>Structure and content</h3>
+                <p>Let's begin with the structure of the website! Firstly, you have to declare your file with the <code>!DOCTYPE html</code> to signal the browser that the code is for HTML and to use the latest edition. Then you use <code>HTML</code> tag to start coding! The <code>HEAD</code> tag consists of all the information about the website, such as the title that will appear on the tab at the top of the site (with the tag <code>TITLE</code>), the <code>LINK</code> tags to link style sheets or fontfaces for styling via CSS, and any other important information. A very fast way of starting your document is to copy and paste the HTML 5 boilerplate, which will have most of the tags needed for the header already writen.</p>
+                <p>Following the <code>HEAD</code> tag, the <code>BODY</code> is where all the content of the website goes. We will go into more details soon. </p>
+            </section>
 
+            <section id="Elements">
+                <h3>Elements</h3>
+                <p>Elements present in a website will always be within the <code>BODY</code> tag. If you want to have a title for a section, you use the <code>h1 - h6</code> tags (bigger to smaller for semantic and flow reasons). If you want a paragraph to detail a section, you use the <code>P</code> tag (one is being used riight now!). To add an image you use the <code>IMG</code> tag, and the same applies for videos (<code>VIDEO</code>) and audio (<code>AUDIO</code>). These last ones are tricky because they dont behave like the rest of the tags. <code>IMG</code> tags are self-closing, so you only need one, and <code>FIGCAPTION</code> can be used to include some descriptive text that will stick with the image wherever it goes. <code>VIDEO and AUDIO</code> both require the <code>SOURCE</code> tag to implement the media we want. To add lists, both ordered (numeric list) or unordered (bullet points), you use the <code>OL or UL</code> respectively, and wrap every item of the list with the <code>LI</code>st tag (IMPORTANT, the only child of the <code>OL or UL</code> tags is <code>LI</code>. To add an anchor to a list, you have to wrap the anchor item with the list tag, not the other way round). To make a specific part of the text different to the rest, you can use <code>SPAN</code>, and style it in CSS. To add a button, you use the <code>BUTTON</code> tag, and you can style it however you need in CSS. Finally (for now), the <code>TABLE</code> tags are used to create tables within your website, and inside your table, you can have a rows, data, table headers, body and foot (<code>TR, TD, THEAD, TBODY, and TFOOT</code> respectively).</p>
+            </section>
+
+            <section id="Semantics">
+                <h3>Semantics</h3>
+                <p>For the sake of flow and comprenhension, we need semantics in our website and its code. Similar to how we have the head and body of the HTML code, within the body, we have a <code>HEADER</code> to include any relevant introductory information and titles, as well as the possibility of integrating a <code>NAV</code>igation list, the <code>MAIN</code> part of the body where the mayority of the content goes, and the <code>FOOTER</code> with all the remaining info about contact and copyright. Within the main, we have <code>SECTIONs</code> (just like this one, on semantics!). Information can also be split into <code>DIV</code>isions and <code>ARTICLEs</code> (you can check more about them in W3 school or MDN). Finally, to add something outside of the articles or sections, such as extra information not essential to the topic, you can use the <code>ASIDE</code> tag.</p>
+            </section>
+
+            <section id="Attributes">
+                <h3>Attributes</h3>
+                <p>The attributes is  where it starts getting interesting. All tags can have attibutes, and these makes the document easier to read, the website better to style, and the elements to function. For the sake of brevity, we will make a table with all the information:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>A</code>nchor tags</td>
+                            <td>I'm including them here because they control all the hyperlinks and whatnot</td>
+                        </tr>
+                        <tr>
+                            <td><code>HREF</code> (Hyperlink reference)</td>
+                            <td>Used to link a URL to anything with an anchor tag</td>
+                        </tr>
+                        <tr>
+                            <td><code>SRC</code> (source)</td>
+                            <td>Used to source an image, video or audio link. These last need the <code>SRC</code> to be inside the <code>SOURCE</code> tag. When adding a source, you can add a relative URL (local file) or an absolute URL (out sourced)</td>
+                        </tr>
+                        <tr>
+                            <td><code>ALT</code>ernative</td>
+                            <td>Used in images, videos and audios to give a description when not rendered. Good practice for accessibility reasons. </td>
+                        </tr>
+                        <tr>
+                            <td><code>WIDTH and HEIGHT</code></td>
+                            <td>Controls such attibutes of images</td>
+                        </tr>
+                        <tr>
+                            <td><code>TITLE</code></td>
+                            <td>Gives more information about an element, but doesn't change it (unless styled in CSS). Furthermore, when hovering over a text that has the title attribute, more information will pop up.</td>
+                        </tr>
+                        <tr>
+                            <td><code>STYLE</code></td>
+                            <td>Adds style directly into the element instead of using a CSS stylesheet. This is common mispractice as code ans style should be separate.</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <section id="CSS">
+            <section class="Introduction">
+                <h2>CSS and Styling your website</h2>
+                <p>CSS, or Cascading Style sheet, is a document that goes linked to the HTMl page to give it some colour and style, along with any other changes you want to commit regarding display, location, fonts and all. As seen before, for readability reasons, the style is usually placed in a separate document. In CSS you use CSS declaration blocks, where you select and element, id, or class (to mention some), and assign a value to a property (e.g., h1 {color: blue;}, .class {color: blue;}, #id {color: blue;}...).</p>
+            </section>
+
+            <section id="color">
+                <h3>Color pallete and background</h3>
+                <p>Colors can be split into foreground and background. The foreground is the colour of the letters, while the background colors is self-explanatory, and you can declare them with <code>color and color-background</code> respectively. Colors can be writen in 4 different ways: </p>
+                <ul>
+                    <li>Color word: CSS has around 150 different color words to choose from. Just write the color you want and, if it is in CSS, it will assign it. </li>
+                    <li>Hexadecimal: You can use the format #XXXXXX, where the first, second and third pair of X will be a hexadecimal value to represent a hue of red, green and blue respectively. Whenever both X in a pair are the same number of letter, you ca choose to only write one (e.g., FF 00 00 can be writen as #F00).</li>
+                    <li>RGB (Red green blue): when choosing a color with RGB, you must write <code>RGB (x, y, z)</code>, where x, y, and z is a number from 0 to 255. </li>
+                    <li>HSL (Hue saturation lightness): when choosing a color this way, you must write <code>HSL (x, y, z)</code> where x is a number from 0 to 100, and y and z are percentages. </li>
+                    <li>Both RGB and HSL have an alternative mode where you add an <code>A</code> to the end of each, called an alpha value (<code>RGBA and HSLA</code>). This value, from 0 to 1, sets the transparency of the element. This way, instrad of making the whole element (letters and background) fully opaque or transparent, you can choose to only make the letters, or the background. </li>
+                </ul>
+                <p>Within the color section, we will also mention that you can add an image to the background, and modify it in accordance to your needs (opacity, hue, size and location...). To do this, you must use the <code>BACKGROUND-IMAGE</code>, and use a URL to link the picture (can use either absolute or relative pathing).</p>
+            </section>
+
+            <section>
+                <h3>Fonts and typography</h3>
+                <p>The words in your website can be altered in many ways! <span id="fontsize">You can change the size with </span><code>FONT-SIZE</code>, <span id="fontweight">the weight with </span><code>FONT-WEIGHT</code> <span id="fontweight">(100-900 to make it more or less bold)</span>, <span id="fontcolor">the color</span> <span id="fontbackgroundcolor">and the background (as we have seen before)</span>, <span id="fontfamily">the font with </span><code>FONT-FAMILY</code> <span id="fontfamily">(using both preloaded or linking external fonts using CSS and Fontfaces)</span>, the alignment with <code>TEXT-ALIGN</code> and the <code>DISPLAY</code> <span id="fontdisplay">for more or less occupied space</span>, <span id="fontstyle">and the style with </span><code>FONT-STYLE</code>.</p>
+            </section>
+
+            <section>
+                <h3>Alignment, display and location</h3>
+                <p>The alignment of the text can be styled like we have seen before. The display of text and images can be styled to ocupy a block, be inline, or both. Finally, the position can be left <code>STATIC</code>, to move it <code>RELATIVE</code> to its default position, to be <code>ABSOLUTE</code> (positioned relative to the first positioned ancestor element), <code>FIXED</code> somewhere in the site and not follow the flow of the document, or <code>STICKY</code> to become fixed after a certain part of the site is scrolled. To learn more, please check the MDN reference. </p>
+            </section>
+
+            <section>
+                <h3>Pseudoclasses</h3>
+                <p>When hovering over a button or a link, you can make the cursor change appearance using the <code>CURSOR</code> declaration. Furthermore, the links and text to be clicked can change color. This is done by setting a <code>COLOR</code> to the text by default, and then adding another declaration with the <code>:HOVER</code> pseudo-class to assign a color or style difference when hovering over. IMPORTANT - You must declare the change of cursor in all anchor links, for example, and not within the a:hover, as this might have unwanted changes.</p>
+                <p>When we want to change the color of links after visiting them, we use the <code>:VISITED</code> declaration. Finally, to customise the text when clicked but before it redirects you, you can use <code>:ACTIVE</code>. The Active declaration is important for buttons (standard, flat, skeuomorphic design...). When using Pseudoclasses, you must follow the <code>:LINK, :VISITED, :HOVER, :ACTIVE</code> cascade order so that elements show their states correctly (unvisited, visited, hovered and clicked). </p>
+            </section>
+        </section>
+    </main>
+</body>
 </html>
