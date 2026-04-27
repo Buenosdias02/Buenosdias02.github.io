@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Front-end cheatsheet</title>
 </head>
 <body>
@@ -13,14 +13,14 @@
             <!-- navigation list TO DO LATER -->
             <p>This is a navigation section, where you can choose the topic and be redirected to it within the same website using anchor tags. The navigation section can have a breadcrumb dynamic where the user will know where they are at all times. This is done via CSS using pseudo-classes and selectors to implement inline displays and content prior to every entry of the list (e.g., <code>.breadcrumb > li {display: inline;}   .breadcrumb li+li::before {content: ">"}</code> where > select all the li items in the .breadcrumb class, and the li+li::before will include a ">" between every li item). Breadcrumb navigation (3 forms: location, attribute and path) is not necessary if there are not a lot of subpages, or there is already some navigation or breadcrumb implemented. </p>
             <ul>
-                <li><a href="#HTML">HTML</a></li>
+                <li><a href="#Tags_attributes">HTML</a></li>
                 <li><a href="#CSS">CSS</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="HTML">
+        <section id="Tags_attributes">
             <section class="Introduction">
             <h2>HTML Tags and attributes</h2>
             <p>HTML uses tags to create elements in the website, and attributes and using within the tags to expand the information or style the elements. Below you will be able to find some of the most useful tags and related attributes used in HTML. </p>
@@ -114,6 +114,25 @@
             <section>
                 <h3>Alignment, display and location</h3>
                 <p>The alignment of the text can be styled like we have seen before. The display of text and images can be styled to ocupy a block, be inline, or both. Finally, the position can be left <code>STATIC</code>, to move it <code>RELATIVE</code> to its default position, to be <code>ABSOLUTE</code> (positioned relative to the first positioned ancestor element), <code>FIXED</code> somewhere in the site and not follow the flow of the document, or <code>STICKY</code> to become fixed after a certain part of the site is scrolled. To learn more, please check the MDN reference. </p>
+
+                <section class="flex">
+                    <h4>Flexbox</h4>
+                    <p>This is a powerful attribute to style and design your website, as it gives you more room to shirk or grow content within containers and organise website aspects in different ways. The codecademy summary is as follows:</p>
+                    <ul>
+                        <li><code>display: flex</code> changes an element to a block-level container with flex items inside of it.</li>
+                        <li><code>display: inline-flex</code> allows multiple flex containers to appear inline with each other.</li>
+                        <li><code>justify-content</code> is used to space items along the main axis.</li>
+                        <li><code>align-items</code> is used to space items along the cross axis.</li>
+                        <li><code>flex-grow</code> is used to specify how much space (and in what proportions) flex items absorb along the main axis. <code>flex-shrink</code> is used to specify how much flex items shrink and in what proportions along the main axis.</li>
+                        <li><code>flex-basis</code> is used to specify the initial size of an element styled with flex-grow and/or flex-shrink.</li>
+                        <li><code>flex</code> is used to specify flex-grow, flex-shrink, and flex-basis in one declaration.</li>
+                        <li><code>flex-wrap</code> specifies that elements should shift along the cross axis if the flex container is not large enough.</li>
+                        <li><code>align-content</code> is used to space rows along the cross axis.</li>
+                        <li><code>flex-direction</code> is used to specify the main and cross axes.</li>
+                        <li><code>flex-flow</code> is used to specify flex-wrap and flex-direction in one declaration.</li>
+                        <li>Flex containers can be nested inside of each other by declaring display: flex or display: inline-flex for children of flex containers.</li>
+                    </ul>
+                </section>
             </section>
 
             <section>
