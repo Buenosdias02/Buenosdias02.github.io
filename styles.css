@@ -1,3 +1,20 @@
+html {
+    margin: auto 20px;
+    text-align: justify;
+}
+
+section {
+    margin-top: 30px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th {
+    text-align: center;
+}
+
 code {
     font-weight: bolder;
     font-style:italic;
@@ -43,7 +60,7 @@ td {
 }
 
 
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: underline; 
 }
