@@ -106,12 +106,12 @@
                 <p>Within the color section, we will also mention that you can add an image to the background, and modify it in accordance to your needs (opacity, hue, size and location...). To do this, you must use the <code>BACKGROUND-IMAGE</code>, and use a URL to link the picture (can use either absolute or relative pathing).</p>
             </section>
 
-            <section>
+            <section class="fonts">
                 <h3>Fonts and typography</h3>
                 <p>The words in your website can be altered in many ways! <span id="fontsize">You can change the size with </span><code>FONT-SIZE</code>, <span id="fontweight">the weight with </span><code>FONT-WEIGHT</code> <span id="fontweight">(100-900 to make it more or less bold)</span>, <span id="fontcolor">the color</span> <span id="fontbackgroundcolor">and the background (as we have seen before)</span>, <span id="fontfamily">the font with </span><code>FONT-FAMILY</code> <span id="fontfamily">(using both preloaded or linking external fonts using CSS and Fontfaces)</span>, the alignment with <code>TEXT-ALIGN</code> and the <code>DISPLAY</code> <span id="fontdisplay">for more or less occupied space</span>, <span id="fontstyle">and the style with </span><code>FONT-STYLE</code>.</p>
             </section>
 
-            <section>
+            <section class="display">
                 <h3>Alignment, display and location</h3>
                 <p>The alignment of the text can be styled like we have seen before. The display of text and images can be styled to ocupy a block, be inline, or both. Finally, the position can be left <code>STATIC</code>, to move it <code>RELATIVE</code> to its default position, to be <code>ABSOLUTE</code> (positioned relative to the first positioned ancestor element), <code>FIXED</code> somewhere in the site and not follow the flow of the document, or <code>STICKY</code> to become fixed after a certain part of the site is scrolled. To learn more, please check the MDN reference. </p>
 
@@ -178,6 +178,32 @@
                 <p>When we want to change the color of links after visiting them, we use the <code>:VISITED</code> declaration. Finally, to customise the text when clicked but before it redirects you, you can use <code>:ACTIVE</code>. The Active declaration is important for buttons (standard, flat, skeuomorphic design...). When using Pseudoclasses, you must follow the <code>:LINK, :VISITED, :HOVER, :ACTIVE</code> cascade order so that elements show their states correctly (unvisited, visited, hovered and clicked). </p>
             </section>
         </section>
+
+        <section id='javascript'>
+            <section class="introduction">
+                <h2>Javascript and interactivity</h2>
+                <p>Using JavaScript (similar to python in many regards), you will be able to modify your  website on real time, changing layouts and colors, behavious and many more things within the actual page. Similarly, you will be able to introduce clients and search queries, which will improve how users view your website. </p>
+            </section>
+
+            <section class='basics'> 
+                <h3>Basics!</h3>
+                <p> In JavaScript, data can be printed to the console using <code>console.log()</code>, which helps with debugging. You can write comments using <code>//</code> for single-line or <code>/* */</code> for multi-line notes. JavaScript has several basic data types, including numbers, <code>BigInt</code>, strings, booleans, <code>null</code>, <code>undefined</code>, symbols, and objects. <code>Numbers</code> are written without quotes, while <code>strings</code> are wrapped in quotes. You can perform calculations using operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code>. Objects can store information using <code>properties</code> (accessed with the dot operator, like <code>.length</code>) and perform actions using <code>methods</code> (like <code>.toUpperCase()</code>). These are accessed using the <code>.</code> operator. JavaScript also provides built-in objects, such as <code>Math</code>, which include useful properties and methods ready to use.</p>
+                <br>
+                <h4>Variables</h4>
+                <p> In JavaScript, <code>variables</code> are used to store reusable data in memory and give it a name. Older code uses <code>var</code>, but in modern JavaScript, <code>let</code> is used for values that can change, while <code>const</code> is used for values that should stay the same. If a variable is declared but not given a value, it defaults to <code>undefined</code>. You can update variables using <code>mathematical assignment operators</code> like <code>+=</code> or <code>*=</code>. The <code>+</code> operator can also be used to join strings together (concatenation). ES6 introduced <code>template literals</code>, which use backticks (<code>`</code>) and <code>${}</code> to insert values into strings more easily. Finally, the <code>typeof</code> operator lets you check the data type of a value. </p>
+                <br>
+                <h4>Conditonals</h4>
+                <p> In JavaScript, an <code>if</code> statement runs code only if a condition is true, while <code>if...else</code> allows you to choose between two outcomes. You can add more conditions using <code>else if</code>. To compare values, you use <code>comparison operators</code> like <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>===</code>, and <code>!==</code>. Logical operators such as <code>&amp;&amp;</code> (and) check if both conditions are true, <code>||</code> (or) checks if at least one is true, and <code>!</code> (not) reverses a value’s truthiness. For shorter conditions, the <code>ternary operator</code> can replace simple if...else statements. When dealing with many conditions, a <code>switch</code> statement can be used instead, and the <code>break</code> keyword prevents additional cases from running once a match is found. </p>
+                <br>
+                <h4>Functions</h4>
+                <p> A <code>function</code> is a reusable block of code used to perform a specific task. Functions are created using the <code>function</code> keyword, followed by an identifier (the function name), optional <code>parameters</code>, and a function body inside curly braces. Parameters act like variables inside the function and receive the values passed in as <code>arguments</code> when the function is called. To execute a function, you write its identifier followed by parentheses, such as <code>greetWorld()</code>. Functions can send data back using the <code>return</code> statement. JavaScript also allows <code>function expressions</code>, where anonymous functions (functions without a name) are stored inside variables, such as <code>const myFunction = function() {}</code>. ES6 introduced <code>arrow functions</code>, which replace the function keyword with the <code>=&gt;</code> fat arrow syntax. Arrow functions can use concise notation: if there is only one parameter, the parentheses can be omitted (<code>number =&gt; number + number</code>), but with zero or multiple parameters, parentheses are required (<code>() =&gt; 5</code> or <code>(a, b) =&gt; a + b</code>). If the function contains only one line, the value is returned automatically without curly braces or the <code>return</code> keyword, while multi-line arrow functions require curly braces and an explicit <code>return</code> statement. </p>
+                <br>
+                <h4>Scope</h4>
+                <p> In JavaScript, <code>scope</code> determines where variables can be accessed in a program, depending on where and how they are declared. Code inside curly braces <code>{}</code> is called a <code>block</code>. Variables declared in the <code>global scope</code> can be accessed from anywhere in the program, and these are known as <code>global variables</code>. Variables declared inside a block only exist within that block, which is called <code>block scope</code>, and these are known as <code>local variables</code>. The <code>global namespace</code> contains all globally available data and variables in the program. Having too many global variables, or reusing variable names carelessly, can lead to <code>scope pollution</code>, which makes code harder to manage and debug. </p>
+            </section>
+            
+        </section>
+        
     </main>
 </body>
 </html>
